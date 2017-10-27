@@ -1,0 +1,176 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<style>
+    	.form-control {
+			height:120;
+			width:530;
+			font-size:50px;
+			text-align:right;
+			letter-spacing:6px;
+			font-family: 'Poiret One', cursive;;
+			color:white;
+        }
+        button {
+   			 background-color: #4CAF50;
+   			 border: none;
+   			 color: white;
+             width:130;
+             height:130;
+  			 text-align: center;
+  			 text-decoration: none;
+  			 display: inline-block;
+   			 font-size: 16px;
+		}
+        	
+		div.border1{
+			background-color: #bfc1c0;
+			margin-top: 1%;
+			border-style: groove;
+			margin-left: 20%;
+			margin-right: 20%;
+			padding: 2px;
+			opacity: 1;
+		}
+		h1{
+			font-family: 'Open Sans', sans-serif;
+		}
+
+		button:hover{
+			background-color:#1f253f;
+		}
+		.number
+		{
+			background-color: #000;
+			color:white;
+			font-size:30px;
+		}
+		.oper
+		{
+			background-color: #535354;
+			color:white;
+			font-size:30px;
+		}
+		.igual
+		{
+			background-color: #274f91;
+			color:white;
+			font-size:30px;
+		}
+		.clear
+		{
+			background-color:#e87700;
+			color:white;
+			font-size:30px;
+		}
+        .clear :hover {
+       		background-color:#a85600;
+        }
+		p {
+			font-family: 'Source Sans Pro', sans-serif;
+			font-size:20px;
+		}
+		th,tr {
+			padding:1px;
+		}
+		.jumbotron {
+			padding:35px;
+		}
+	</style>
+    
+    
+    <script>
+
+    function Num(n) {
+		var visor = document.getElementById("visor");
+		if (visor.value == 0)
+			{visor.value = n;}
+		else {visor.value += n;}
+	}
+	function apagar() {
+		var visor = document.getElementById("visor");
+		visor.value = '0';
+	}
+	function Op(op) {
+		var visor = document.getElementById("visor");
+		var num = document.getElementById("num")
+		var oper = document.getElementById("op")
+		num.value = visor.value
+		visor.value = ''
+		oper.value = op
+	}
+ 	function Equal() {
+		var visor = document.getElementById("visor");
+		var num = document.getElementById("num")
+		var oper = document.getElementById("op")
+		if (oper.value == "+")
+			{result = parseFloat(visor.value) + parseFloat(num.value);}
+		if (op.value == "-")
+			{result = parseFloat(num.value) - parseFloat(visor.value);}
+		if (op.value == "÷")
+			{result = parseFloat(num.value) / parseFloat(visor.value);}
+		if (op.value == "*")
+			{result = parseFloat(num.value) * parseFloat(visor.value);}
+		visor.value = result
+	}
+    </script>
+    
+</head>
+<body background="http://engenhariae.com.br/wp-content/uploads/2017/10/matem%C3%A1tica.jpg">
+<div class="border1 text-responsive">
+        <center>
+			<br>
+			<div class="form-group">
+				<input style="background-color:#547050;color:white;" class="form-control" type="text" id="visor" name="visor" value="0" size="27" disabled></div>
+			<table style="align:center;">
+			<tr>
+				<th><label><button id="7" onclick="Num(7)" class="btn-lg number" value="7">7</button></label></th>
+
+				<th><label><button id="8" onclick="Num(8)" class="btn-lg number" value="8">8</button></label></th>
+
+				<th><label><button id="9" onclick="Num(9)" class="btn-lg number " value="9">9</button></label></th>
+
+				<th><label><button id="/" onclick="Op('÷');" class="btn-lg oper" value="/">÷</button></label></th>
+			</tr>
+			<tr>
+				<th><label><button id="4" onclick="Num(4)" class="btn-lg number" value="4">4</button></label></th>
+
+				<th><label><button id="5" onclick="Num(5)" class="btn-lg number" value="5">5</button></label></th>
+
+				<th><label><button id="6" onclick="Num(6)" class="btn-lg number" value="6">6</button></label></th>
+
+				<th><label><button id="-" onclick="Op('-')" class="btn-lg oper" value="-">-</button></label></th>
+			</tr>
+			<tr>
+				<th><label><button id="1" onclick="Num(1)" class="btn-lg number" value="1">1</button></label></th>
+
+				<th><label><button id="2" onclick="Num(2)" class="btn-lg number" value="2">2</button></label></th>
+
+				<th><label><button id="3" onclick="Num(3)" class="btn-lg number" value="3">3</button></label></th>
+
+				<th><label><button id="+" onclick="Op('+')" class="btn-lg oper" value="+">+</button></label></th>
+			</tr>
+			<tr>
+				<th><label><button id="C" onclick="apagar()" class="btn-lg clear" value="c">C</button></label></th>
+
+				<th><label><button id="0" onclick="Num(0)" class="btn-lg number" value="0">0</button></label></th>
+
+				<th><label><button id="=" onclick="Equal()" class="btn-lg igual" value="=">=</button></label></th>
+
+				<th><label><button id="x" onclick="Op('*')" class="btn-lg oper" value="*">x</button></label></th>
+			</tr>
+				
+			</table>
+				<input style="opacity:0;" type="text" id="num" size="1" disabled>
+				<input style="opacity:0;" type="text" id="op" size="1" disabled>
+				<p class="jumbotron">© 2017 Lucas Vinício & Ricardo. Todos Direitos Reservados.</p>
+				</center>
+</div>
+
+</body>
+</html>
