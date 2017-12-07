@@ -1,0 +1,73 @@
+    .form-control {
+			height:120;
+			width:530;
+			font-size:50px;
+			text-align:right;
+			letter-spacing:6px;
+			font-family: 'Poiret One', cursive;;
+			color:white;
+       }
+      button {
+   			 background-color: #4CAF50;
+   			 border: none;
+   			 color: white;
+         width:130;
+         height:130;
+  			 text-align: center;
+  			 text-decoration: none;
+  			 display: inline-block;
+   			 font-size: 16px;
+		}  	
+		div.border1{
+			background-color: #bfc1c0;
+			margin-top: 1%;
+			border-style: groove;
+			margin-left: 20%;
+			margin-right: 20%;
+			padding: 2px;
+			opacity: 1;
+		}
+		h1{
+			font-family: 'Open Sans', sans-serif;
+		}
+
+		button:hover{
+			background-color:#1f253f;
+		}
+		.number
+		{
+			background-color: #000;
+			color:white;
+			font-size:30px;
+		}
+		.oper
+		{
+			background-color: #535354;
+			color:white;
+			font-size:30px;
+		}
+		.igual
+		{
+			background-color: #274f91;
+			color:white;
+			font-size:30px;
+		}
+		.clear
+		{
+			background-color:#e87700;
+			color:white;
+			font-size:30px;
+		}
+        .clear :hover {
+       		background-color:#a85600;
+        }
+		p {
+			font-family: 'Source Sans Pro', sans-serif;
+			font-size:20px;
+		}
+		th,tr {
+			padding:1px;
+		}
+		.jumbotron {
+			padding:35px;
+		}
