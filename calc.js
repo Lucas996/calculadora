@@ -1,4 +1,4 @@
-  function Num(n) {
+ 	function Num(n) {
 		var visor = document.getElementById("visor");
 		if (visor.value == 0)
 			{visor.value = n;}
